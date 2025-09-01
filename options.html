@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>Open Bookmarks in New Tab - 設定</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", sans-serif; margin: 20px; line-height: 1.6; }
+    label { display: flex; align-items: center; gap: 8px; margin: 8px 0; }
+  </style>
+</head>
+<body>
+  <h1>設定</h1>
+
+  <label>
+    <input type="checkbox" id="openInBackground">
+    書籤在背景分頁開啟（不搶焦點）
+  </label>
+
+  <label>
+    <input type="checkbox" id="closeEmptySourceTab">
+    無法後退時，若原分頁是空白/新分頁則直接關閉
+  </label>
+
+  <p id="status" aria-live="polite"></p>
+
+  <script src="options.js"></script>
+</body>
+</html>
