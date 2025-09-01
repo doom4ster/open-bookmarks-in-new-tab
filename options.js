@@ -4,7 +4,7 @@ const statusEl = document.getElementById('status');
 
 function showStatus(msg) {
   statusEl.textContent = msg;
-  setTimeout(() => (statusEl.textContent = ''), 1200);
+  setTimeout(() => (statusEl.textContent = ''), 2000); // 顯示 2 秒
 }
 
 function load() {
@@ -26,10 +26,10 @@ function save() {
       openInBackground: openInBackgroundEl.checked,
       closeEmptySourceTab: closeEmptySourceTabEl.checked
     },
-    () => showStatus('已儲存')
+    () => showStatus('已儲存設定')
   );
 }
 
 openInBackgroundEl.addEventListener('change', save);
 closeEmptySourceTabEl.addEventListener('change', save);
-document.addEventListener('DOMContentLoaded', load);
+window.addEventListener('DOMContentLoaded', load);
