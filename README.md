@@ -18,15 +18,6 @@
   - 「書籤在背景分頁開啟（不搶焦點）」。
   - 「無法後退時，若原分頁是空白/新分頁則直接關閉」。
 
-## 打包與上架（CWS）
-1. 準備 `icons/icon16.png`, `icon48.png`, `icon128.png`。
-2. 壓縮整個資料夾為 `open-bookmarks-new-tab.zip`（**不是 .crx**）。
-3. 到 [Chrome Web Store 開發者主控台](https://chrome.google.com/webstore/devconsole) 建立專案並上傳。
-4. 於商店頁面填寫：
-   - 概述/完整描述：寫清楚功能與權限用途。
-   - 隱私權政策 URL：使用本專案的 `privacy-policy.md` 轉為網頁後的連結。
-   - 上傳 2–3 張截圖（功能示意、選項頁）。
-5. 送審。
 
 ## 開發備註（MV3）
 - 背景程式為 **Service Worker**，事件驅動，不做保活。
