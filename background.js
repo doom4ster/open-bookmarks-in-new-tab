@@ -128,6 +128,17 @@ chrome.webNavigation.onCommitted.addListener(async (details) => {
   await ensureSessionStruct();
   await gcSessionMaps();
 
+  // 檢查分頁是否屬於群組，如果是則跳過處理（讓 Chrome 原生群組行為正常運作）
+  try {
+    const tab = await chrome.tabs.get(tabId);
+    if (tab.groupId && tab.groupId !== -1) {
+      // 分頁屬於群組，跳過處理
+      return;
+    }
+  } catch {
+    // 無法取得分頁資訊，繼續原有邏輯
+  }
+
   // 若該分頁「剛建立」，代表 Chrome 已在新分頁開啟 → 略過
   if (await isTabJustCreated(tabId)) return;
 

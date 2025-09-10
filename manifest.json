@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Open Bookmarks in New Tab (Force)",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "由書籤觸發導覽時，自動在新分頁開啟，並避免資料夾/分頁群組批次開啟時的重複。",
   "icons": {
     "16": "icons/icon16.png",
